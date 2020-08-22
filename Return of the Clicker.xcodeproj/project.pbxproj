@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		FA338D6624F0B90700BC91F2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA338D6524F0B90700BC91F2 /* AppDelegate.swift */; };
 		FA338D6824F0B90700BC91F2 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA338D6724F0B90700BC91F2 /* SceneDelegate.swift */; };
-		FA338D6A24F0B90700BC91F2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA338D6924F0B90700BC91F2 /* ViewController.swift */; };
+		FA338D6A24F0B90700BC91F2 /* ClickerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA338D6924F0B90700BC91F2 /* ClickerViewController.swift */; };
 		FA338D6D24F0B90700BC91F2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA338D6B24F0B90700BC91F2 /* Main.storyboard */; };
 		FA338D6F24F0B90A00BC91F2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FA338D6E24F0B90A00BC91F2 /* Assets.xcassets */; };
 		FA338D7224F0B90A00BC91F2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FA338D7024F0B90A00BC91F2 /* LaunchScreen.storyboard */; };
@@ -19,7 +19,7 @@
 		FA338D6224F0B90700BC91F2 /* Return of the Clicker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Return of the Clicker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FA338D6524F0B90700BC91F2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FA338D6724F0B90700BC91F2 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FA338D6924F0B90700BC91F2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		FA338D6924F0B90700BC91F2 /* ClickerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClickerViewController.swift; sourceTree = "<group>"; };
 		FA338D6C24F0B90700BC91F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FA338D6E24F0B90A00BC91F2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FA338D7124F0B90A00BC91F2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -58,7 +58,7 @@
 			children = (
 				FA338D6524F0B90700BC91F2 /* AppDelegate.swift */,
 				FA338D6724F0B90700BC91F2 /* SceneDelegate.swift */,
-				FA338D6924F0B90700BC91F2 /* ViewController.swift */,
+				FA338D6924F0B90700BC91F2 /* ClickerViewController.swift */,
 				FA338D6B24F0B90700BC91F2 /* Main.storyboard */,
 				FA338D6E24F0B90A00BC91F2 /* Assets.xcassets */,
 				FA338D7024F0B90A00BC91F2 /* LaunchScreen.storyboard */,
@@ -138,7 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FA338D6A24F0B90700BC91F2 /* ViewController.swift in Sources */,
+				FA338D6A24F0B90700BC91F2 /* ClickerViewController.swift in Sources */,
 				FA338D6624F0B90700BC91F2 /* AppDelegate.swift in Sources */,
 				FA338D6824F0B90700BC91F2 /* SceneDelegate.swift in Sources */,
 			);
@@ -284,7 +284,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Return of the Clicker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -292,6 +294,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Favian-LOH.Return-of-the-Clicker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -301,7 +304,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Return of the Clicker/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -309,6 +314,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Favian-LOH.Return-of-the-Clicker";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
