@@ -12,7 +12,7 @@ class ClickerViewController: UIViewController {
     // MARK: - Variables & Constants
     var counter = 0
     var timer: Timer!
-    var currentTime: Float!
+    var currentTime: Float = 0
     
     // MARK: - IBOutlets
     @IBOutlet weak var counterLabel: UILabel!
