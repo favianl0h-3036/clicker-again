@@ -11,11 +11,11 @@ import UIKit
 class ClickerViewController: UIViewController {
     // MARK: - Variables & Constants
     var counter = 0
-    var timer: Timer!
-    var currentTime: Float = 0
+    var time: Float = 0
     
     // MARK: - IBOutlets
     @IBOutlet weak var counterLabel: UILabel!
+    @IBOutlet var tapGestureRecogniser: UITapGestureRecognizer!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -25,17 +25,18 @@ class ClickerViewController: UIViewController {
     }
     
     // MARK: - IBActions
-    @IBAction func tapped() {
+    @IBAction func tapped(_ sender: Any) {
         counter += 1
-        counterLabel.text = "\(counter)"
+        counterLabel.text = String(counter)
         if counter == 30 {
-            print("Done!")
+            print("Maximum reached in \(time) seconds!")
+            performSegue(withIdentifier: "exitClicker", sender: self)
         }
     }
     
     // MARK: - Other Functions
     @objc func addTime() {
-        currentTime += 0.1
+        time += 0.1
     }
 }
 

@@ -10,7 +10,7 @@ import UIKit
 
 class MainTVC: UITableViewController {
     // MARK: - Variables & Constants
-    var scores: [Float] = [1.0, 0.3]
+    var scores: [Float] = [1.0, 5.0]
     
     // MARK: - IBOutlets
 
@@ -98,8 +98,12 @@ class MainTVC: UITableViewController {
     */
     
     // MARK: - IBActions
-    @IBAction func unwindFromGame(withSegue segue: UIStoryboardSegue) {
-        
+    @IBAction func unwindToScoreTable(segue: UIStoryboardSegue) {
+        if segue.identifier == "exitClicker" {
+            let source = segue.source as! ClickerViewController
+            scores.append(source.time)
+            tableView.reloadData()
+        }
     }
     
     // MARK: - Other Functions

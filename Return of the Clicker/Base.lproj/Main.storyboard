@@ -33,7 +33,7 @@
                     <navigationItem key="navigationItem" title="Scores" largeTitleDisplayMode="always" id="pXp-OK-zqK">
                         <barButtonItem key="rightBarButtonItem" title="Play" id="hSM-Rl-eIr">
                             <connections>
-                                <segue destination="BYZ-38-t0r" kind="presentation" id="mUF-47-43l"/>
+                                <segue destination="BYZ-38-t0r" kind="presentation" modalPresentationStyle="fullScreen" id="mUF-47-43l"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -47,17 +47,17 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ClickerViewController" customModule="Return_of_the_Clicker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E4J-ZI-bBP">
-                                <rect key="frame" x="20" y="0.0" width="374" height="808"/>
+                                <rect key="frame" x="20" y="44" width="374" height="818"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="50"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <color key="backgroundColor" red="0.82174318512346234" green="0.94243439283989705" blue="0.96130555868148804" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="E4J-ZI-bBP" secondAttribute="trailing" constant="20" id="Okd-Mq-beC"/>
@@ -73,12 +73,15 @@
                     <navigationItem key="navigationItem" id="VGP-up-HB5"/>
                     <connections>
                         <outlet property="counterLabel" destination="E4J-ZI-bBP" id="CyW-DU-Mmq"/>
+                        <outlet property="tapGestureRecogniser" destination="euv-MB-PBi" id="kgA-fJ-T3J"/>
+                        <segue destination="YbI-uw-nnX" kind="unwind" identifier="exitClicker" unwindAction="unwindFromGameWithSegue:" id="vg4-r6-vnX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <exit id="YbI-uw-nnX" userLabel="Exit" sceneMemberID="exit"/>
                 <tapGestureRecognizer id="euv-MB-PBi">
                     <connections>
-                        <action selector="tapped" destination="BYZ-38-t0r" id="E30-Hl-jtf"/>
+                        <action selector="tapped:" destination="BYZ-38-t0r" id="gOA-o5-27U"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
