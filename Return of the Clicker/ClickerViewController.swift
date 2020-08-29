@@ -11,7 +11,7 @@ import UIKit
 class ClickerViewController: UIViewController {
     // MARK: - Variables & Constants
     var counter = 0
-    var time: Float = 0
+    var time: Double = 0
     
     // MARK: - IBOutlets
     @IBOutlet weak var counterLabel: UILabel!
@@ -39,4 +39,3 @@ class ClickerViewController: UIViewController {
         time += 0.1
     }
 }
-

@@ -17,14 +17,23 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <color key="sectionIndexBackgroundColor" red="0.8217431851" green="0.94243439279999996" blue="0.96130555870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="scoreRow" id="TpH-Io-S1q">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="scoreRow" textLabel="WEe-U3-fOp" style="IBUITableViewCellStyleDefault" id="TpH-Io-S1q">
                                 <rect key="frame" x="0.0" y="28" width="414" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="TpH-Io-S1q" id="dQk-xg-yML">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="WEe-U3-fOp">
+                                            <rect key="frame" x="20" y="0.0" width="374" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
                                 </tableViewCellContentView>
-                                <color key="backgroundColor" red="0.8217431851" green="0.94243439279999996" blue="0.96130555870000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -76,7 +85,7 @@
                     <connections>
                         <outlet property="counterLabel" destination="E4J-ZI-bBP" id="CyW-DU-Mmq"/>
                         <outlet property="tapGestureRecogniser" destination="euv-MB-PBi" id="kgA-fJ-T3J"/>
-                        <segue destination="YbI-uw-nnX" kind="unwind" identifier="exitClicker" unwindAction="unwindFromGameWithSegue:" id="vg4-r6-vnX"/>
+                        <segue destination="YbI-uw-nnX" kind="unwind" identifier="exitClicker" unwindAction="unwindToScoreTableWithSegue:" id="MBB-Bj-9xo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

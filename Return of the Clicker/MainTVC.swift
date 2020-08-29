@@ -10,7 +10,7 @@ import UIKit
 
 class MainTVC: UITableViewController {
     // MARK: - Variables & Constants
-    var scores: [Float] = [1.0, 5.0]
+    var scores: [Double] = [1.0, 5.0]
     
     // MARK: - IBOutlets
 
@@ -40,10 +40,8 @@ class MainTVC: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: "scoreRow", for: indexPath)
 
         // Configure the cell...
-        if let label = cell.textLabel {
-            let currentScore = scores[indexPath.row]
-            label.text = String(currentScore)
-        }
+        cell.textLabel?.textColor = .black
+        cell.textLabel?.text = "\(scores[indexPath.row])"
 
         return cell
     }
@@ -98,11 +96,9 @@ class MainTVC: UITableViewController {
     
     // MARK: - IBActions
     @IBAction func unwindToScoreTable(segue: UIStoryboardSegue) {
-        if segue.identifier == "exitClicker" {
-            let source = segue.source as! ClickerViewController
-            scores.append(source.time)
-            tableView.reloadData()
-        }
+        let source = segue.source as! ClickerViewController
+        scores.append(source.time)
+        tableView.reloadData()
     }
     
     // MARK: - Other Functions
